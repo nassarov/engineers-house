@@ -1,0 +1,6 @@
+- No Framework Used
+- Vanilla JS
+- Many Plugins
+- JQuery for Plugins
+- UI/UX Sketches
+- Mind Mapping
