@@ -6,6 +6,7 @@ body {
   min-height: 100vh;
   background-image: url("../imgs/img-3.jpg");
   background-size: cover;
+  padding: 0 80px;
 }
 .landing-page .overlay {
   background-color: #000;
@@ -25,6 +26,17 @@ body {
   .logo {
     width: 300px;
     padding: 15px;
+  }
+  .menu {
+    list-style: none;
+    text-align: right;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 20px;
+    li {
+      display: inline-block;
+      margin-left: 10px;
+    }
   }
 }
 /* End Landing Page */
