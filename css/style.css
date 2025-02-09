@@ -1,3 +1,14 @@
+:root {
+  --primary: #ffc107;
+  --secondary: #ffb100;
+  --second: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+}
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -35,17 +46,33 @@ body {
     width: 100%;
     padding-left: 0;
     padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     li {
       display: inline-block;
       margin-left: 10px;
       cursor: pointer;
       font-size: 16px;
-      padding-top: 10px;
-      padding-bottom: 10px;
       padding-left: 20px;
       padding-right: 20px;
       font-weight: 400;
     }
+  }
+}
+.introduction {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 800px;
+  text-align: left;
+  z-index: 2;
+  h1 {
+    font-size: 50px;
+  }
+  p {
+    font-size: 22px;
   }
 }
 /* End Landing Page */
