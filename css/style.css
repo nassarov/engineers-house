@@ -52,10 +52,20 @@ body {
       display: inline-block;
       margin-left: 10px;
       cursor: pointer;
-      font-size: 16px;
       padding-left: 20px;
       padding-right: 20px;
       font-weight: 400;
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+      }
+      a:hover {
+        color: var(--secondary);
+      }
+      .active {
+        color: var(--secondary);
+      }
     }
   }
 }
