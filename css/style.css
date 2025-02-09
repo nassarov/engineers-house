@@ -17,4 +17,14 @@ body {
   content: "";
   opacity: 0.3;
 }
+.header-area {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  .logo {
+    width: 300px;
+    padding: 15px;
+  }
+}
 /* End Landing Page */
