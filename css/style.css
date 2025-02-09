@@ -10,7 +10,7 @@
   --gray-dark: #343a40;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 /* Start Landing Page */
 .landing-page {
@@ -65,11 +65,12 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 800px;
+  width: 750px;
   text-align: left;
   z-index: 2;
   h1 {
     font-size: 50px;
+    font-weight: 400;
   }
   p {
     font-size: 22px;
