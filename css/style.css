@@ -65,12 +65,15 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 750px;
   text-align: left;
   z-index: 2;
+  width: 55%;
   h1 {
     font-size: 50px;
     font-weight: 400;
+    span {
+      color: var(--secondary);
+    }
   }
   p {
     font-size: 22px;
