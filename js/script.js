@@ -22,6 +22,16 @@ gear.addEventListener("click", () => {
   setting.classList.toggle("open");
 });
 
+// check for color in localStorage
+let storageColor = localStorage.getItem("theme-color");
+
+if (storageColor !== null) {
+  document.documentElement.style.setProperty(
+    "--secondary",
+    localStorage.getItem("theme-color")
+  );
+}
+
 // switching by options the color of theme
 const colors = document.querySelectorAll(".colors-list li");
 // looping on list items
@@ -33,5 +43,7 @@ colors.forEach((li) => {
       "--secondary",
       e.target.dataset.color
     );
+    // Setting the color in localStorage
+    localStorage.setItem("theme-color", e.target.dataset.color);
   });
 });
