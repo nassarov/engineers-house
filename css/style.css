@@ -35,6 +35,38 @@ body {
 .open {
   left: 0;
 }
+
+.option-box {
+  padding: 20px;
+  .colors-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    li {
+      width: 20px;
+      height: 20px;
+      background-color: #333;
+      cursor: pointer;
+      opacity: 0.5;
+      display: inline-block;
+    }
+    .active {
+      opacity: 1;
+    }
+    li:first-child {
+      background-color: var(--secondary);
+    }
+    li:nth-child(2) {
+      background-color: var(--info);
+    }
+    li:nth-child(3) {
+      background-color: var(--success);
+    }
+    li:nth-child(4) {
+      background-color: #e91e63;
+    }
+  }
+}
 /* End Settings Box*/
 
 /* Start Landing Page */
