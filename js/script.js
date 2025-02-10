@@ -13,10 +13,25 @@ setInterval(() => {
   if (img === 4) img = 0;
 }, 3000);
 
+// toggle option button to open settings
 let setting = document.querySelector(".settings-box");
 let gear = document.querySelector(".toggle-settings");
 let settingButton = document.querySelector(".fa-gear");
 gear.addEventListener("click", () => {
   settingButton.classList.toggle("fa-spin");
   setting.classList.toggle("open");
+});
+
+// switching by options the color of theme
+const colors = document.querySelectorAll(".colors-list li");
+// looping on list items
+colors.forEach((li) => {
+  // select color on click on
+  li.addEventListener("click", (e) => {
+    //  Set color on root
+    document.documentElement.style.setProperty(
+      "--secondary",
+      e.target.dataset.color
+    );
+  });
 });
