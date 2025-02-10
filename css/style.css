@@ -12,6 +12,31 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+/* Start Settings Box*/
+.settings-box {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  background-color: var(--light);
+  width: 250px;
+  z-index: 10;
+  min-height: 100vh;
+  transition: 0.3s;
+  i {
+    position: absolute;
+    background-color: var(--light);
+    right: -28px;
+    top: 100px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+.settings-box .open {
+  left: 0;
+}
+/* End Settings Box*/
+
 /* Start Landing Page */
 .landing-page {
   min-height: 100vh;
