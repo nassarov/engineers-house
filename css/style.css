@@ -22,17 +22,17 @@ body {
   z-index: 10;
   min-height: 100vh;
   transition: 0.3s;
-  i {
+  .toggle-settings {
     position: absolute;
     background-color: var(--light);
-    right: -28px;
+    right: -30px;
     top: 100px;
     padding: 8px;
     text-align: center;
     cursor: pointer;
   }
 }
-.settings-box .open {
+.open {
   left: 0;
 }
 /* End Settings Box*/
