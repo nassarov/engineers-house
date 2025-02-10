@@ -30,6 +30,14 @@ if (storageColor !== null) {
     "--secondary",
     localStorage.getItem("theme-color")
   );
+  // check for active class
+  document.querySelectorAll(".colors-list li").forEach((ele) => {
+    ele.classList.remove("active");
+    // add active class to ele of color in storage
+    if (ele.dataset.color === storageColor) {
+      ele.classList.add("active");
+    }
+  });
 }
 
 // switching by options the color of theme
