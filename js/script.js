@@ -45,5 +45,12 @@ colors.forEach((li) => {
     );
     // Setting the color in localStorage
     localStorage.setItem("theme-color", e.target.dataset.color);
+
+    // remove active class from all children by going back to parent the to children
+    e.target.parentElement.querySelectorAll(".active").forEach((ele) => {
+      ele.classList.remove("active");
+    });
+    // Add active on target
+    e.target.classList.add("active");
   });
 });
