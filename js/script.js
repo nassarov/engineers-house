@@ -12,3 +12,11 @@ setInterval(() => {
   img++;
   if (img === 4) img = 0;
 }, 3000);
+
+let setting = document.querySelector(".settings-box");
+let gear = document.querySelector(".toggle-settings");
+let settingButton = document.querySelector(".fa-gear");
+gear.addEventListener("click", () => {
+  settingButton.classList.toggle("fa-spin");
+  setting.classList.toggle("open");
+});
