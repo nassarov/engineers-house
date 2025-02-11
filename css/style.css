@@ -233,7 +233,8 @@ body {
   }
   p {
     color: #aaa;
-    line-height: 1.5;
+    line-height: 2;
+    font-size: 18px;
   }
 }
 
@@ -243,29 +244,36 @@ body {
 .about-data {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 .about-data .data-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
   padding: 0 20px;
   border-radius: 6px;
   text-align: center;
-  border: 1px solid #333;
-  width: 100px;
-  height: 100px;
+  border: 1px solid #eee;
+  width: 90px;
+  height: 110px;
+  box-shadow: 3px 3px 3px #333;
+  cursor: context-menu;
+  transition: 0.3s;
   h4 {
     color: #aaa;
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 0;
   }
   span {
     color: var(--secondary);
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 0;
   }
+}
+.data-card:hover {
+  transform: translateY(-5px);
 }
 /* End About */
