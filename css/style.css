@@ -210,15 +210,20 @@ body {
 }
 .about-info {
   display: flex;
+  flex-direction: row-reverse;
 }
 .about-info .about-img {
   margin: 10px 0;
 }
-.about-info .about-img img {
+.about-img img {
   max-width: 100%;
   margin: 0 auto;
 }
-.about-info .about-text {
+.about-static {
+  flex: 1;
+  margin-left: 70px;
+}
+.about-static .about-text {
   h2 {
     color: var(--secondary);
     font-weight: 400;
@@ -230,5 +235,16 @@ body {
     color: #aaa;
     line-height: 1.5;
   }
+}
+
+.about-info .about-data {
+  padding: 20px;
+}
+.about-data .data-card {
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #333;
+  width: 120px;
 }
 /* End About */
