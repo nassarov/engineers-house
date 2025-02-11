@@ -80,6 +80,7 @@ body {
   background-image: url("../imgs/img-4.jpg");
   background-size: cover;
   padding: 0 80px;
+  transition: 1s;
 }
 .landing-page .overlay {
   background-color: #000;
