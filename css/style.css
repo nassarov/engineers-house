@@ -209,6 +209,7 @@ body {
   background-color: white;
 }
 .about-info {
+  display: flex;
 }
 .about-info .about-img {
   margin: 10px 0;
@@ -218,8 +219,16 @@ body {
   margin: 0 auto;
 }
 .about-info .about-text {
-    h2{
-        color: var(--secondary);
-    }
+  h2 {
+    color: var(--secondary);
+    font-weight: 400;
+  }
+  h1 {
+    font-weight: 800;
+  }
+  p {
+    color: #aaa;
+    line-height: 1.5;
+  }
 }
 /* End About */
