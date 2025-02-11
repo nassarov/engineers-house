@@ -156,9 +156,11 @@ body {
 /* End Landing Page */
 
 /* Start About */
+.info {
+  background-color: var(--light);
+}
 .container {
   padding: 0 80px;
-  background-color: var(--light);
 }
 .cards {
   display: grid;
@@ -181,6 +183,7 @@ body {
 }
 .info-card .text {
   margin-bottom: 10px;
+  padding: 0 10px;
   p {
     color: #aaa;
     font-size: 16px;
