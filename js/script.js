@@ -1,6 +1,5 @@
 // select landing page
 let landing = document.querySelector(".landing-page");
-console.log(landing);
 let images = ["img-0.jpg", "img-2.jpg", "img-3.jpg", "img-4.jpg"];
 // setInterval(() => {
 //   let rand = Math.floor(Math.random() * images.length);
@@ -62,3 +61,40 @@ colors.forEach((li) => {
     e.target.classList.add("active");
   });
 });
+
+// Select data from about
+let about = document.querySelector(".about-reach");
+let allData = document.querySelectorAll(".data-card span");
+let isDataUpdated = false;
+
+window.onscroll = () => {
+  // Offset of section
+  let aboutOffset = about.offsetTop;
+
+  // offset outer height
+  let aboutOuterH = about.offsetHeight;
+
+  // Window height
+  let windowH = this.innerHeight;
+
+  // window scroll top
+  let windowScrollTop = window.scrollY;
+
+  if (windowScrollTop > aboutOffset + aboutOuterH - windowH && !isDataUpdated) {
+    allData.forEach((data) => {
+      if (data.dataset.n) {
+        let target = parseInt(data.dataset.n, 10);
+        let count = 0;
+        let interval = setInterval(() => {
+          if (count <= target) {
+            data.innerHTML = count;
+            count++;
+          } else {
+            clearInterval(interval);
+          }
+        }, 2); // Adjust the interval time as needed
+      }
+    });
+    isDataUpdated = true;
+  }
+};
