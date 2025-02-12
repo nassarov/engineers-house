@@ -63,7 +63,7 @@ colors.forEach((li) => {
 });
 
 // Select data from about
-let about = document.querySelector(".about-reach");
+let about = document.querySelector(".about");
 let allData = document.querySelectorAll(".data-card span");
 let isDataUpdated = false;
 
@@ -92,7 +92,7 @@ window.onscroll = () => {
           } else {
             clearInterval(interval);
           }
-        }, 2); // Adjust the interval time as needed
+        }, 5); // Adjust the interval time as needed
       }
     });
     isDataUpdated = true;
