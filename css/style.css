@@ -310,7 +310,6 @@ body {
 }
 .prj {
   border-radius: 6px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
   width: 300px;
   text-align: center;
   margin-bottom: 20px;
@@ -319,5 +318,20 @@ body {
     color: #aaa;
   }
 }
+.prj img {
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.prj img:hover {
+  transform: scale(1.1);
+}
+
 
 /* End Projects */
