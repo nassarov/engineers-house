@@ -278,3 +278,34 @@ body {
   transform: translateY(-5px);
 }
 /* End About */
+/* Start Projects */
+.projects {
+  background-color: var(--light);
+  padding: 10px 0;
+}
+.projects .text {
+  text-align: center;
+  padding: 20px;
+  h3 {
+    color: var(--secondary);
+    font-size: larger;
+  }
+  p {
+    color: #aaa;
+    font-weight: 500;
+  }
+}
+.wrapper {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  align-items: center;
+  padding: 0 20px;
+}
+.projects-box {
+  display: flex;
+  gap: 20px;
+  transition: all 1s ease-in-out;
+  justify-content: center;
+}
+/* End Projects */
