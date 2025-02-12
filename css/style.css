@@ -271,6 +271,7 @@ body {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 0;
+    transition: all 0.5s;
   }
 }
 .data-card:hover {
