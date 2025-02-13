@@ -87,7 +87,7 @@ window.onscroll = () => {
         let count = 0;
         let interval = setInterval(() => {
           if (count <= target) {
-            data.innerHTML = count;
+            data.innerHTML = `${count}+`;
             count++;
           } else {
             clearInterval(interval);
@@ -99,26 +99,12 @@ window.onscroll = () => {
   }
 };
 
-// projects 
-
+// projects
 const buttonsWrapper = document.querySelector(".map");
+const map1 = document.querySelector(".map .first");
+const map2 = document.querySelector(".map .second");
 const slides = document.querySelector(".projects-box");
-
-buttonsWrapper.addEventListener("click", e => {
-  if (e.target.nodeName === "BUTTON") {
-    Array.from(buttonsWrapper.children).forEach(item =>
-      item.classList.remove("active")
-    );
-    if (e.target.classList.contains("first")) {
-      slides.style.transform = "translateX(-0%)";
-      e.target.classList.add("active");
-    } else if (e.target.classList.contains("second")) {
-      slides.style.transform = "translateX(-33%)";
-      e.target.classList.add("active");
-    }
-    //  else if (e.target.classList.contains('third')){
-    //   slides.style.transform = 'translatex(-66%)';
-    //   e.target.classList.add('active');
-    // }
-  }
-});
+const projects = document.querySelectorAll(".prj");
+const totalSlides = projects.length;
+console.log(totalSlides);
+let currentIndex = 0;
