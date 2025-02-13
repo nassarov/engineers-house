@@ -108,3 +108,16 @@ const projects = document.querySelectorAll(".prj");
 const totalSlides = projects.length;
 console.log(totalSlides);
 let currentIndex = 0;
+
+// Function to move to the next slide
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides; // Loop back to the first slide
+  console.log(currentIndex);
+  if (currentIndex >= totalSlides / 2) {
+    map1.classList.remove("active");
+    map2.classList.add("active");
+  } else {
+    map2.classList.remove("active");
+    map1.classList.add("active");
+  }
+}
