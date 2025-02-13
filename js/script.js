@@ -151,7 +151,9 @@ const prjImg = document.querySelectorAll(".prj .image");
 
 prjImg.forEach((ele) => {
   const expand = document.createElement("div");
-
+  const expandIcon = document.createElement("i");
+  expandIcon.classList.add("fa-solid", "fa-expand", "expand-icon");
+  expand.appendChild(expandIcon);
   ele.addEventListener("mouseover", () => {
     expand.classList.add("expand");
     ele.appendChild(expand);
