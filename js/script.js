@@ -106,13 +106,12 @@ const map2 = document.querySelector(".map .second");
 const slides = document.querySelector(".projects-box");
 const projects = document.querySelectorAll(".prj");
 const totalSlides = projects.length;
-console.log(totalSlides);
 let currentIndex = 0;
 
 // Function to move to the next slide
 function nextSlide() {
   currentIndex = (currentIndex + 1) % totalSlides; // Loop back to the first slide
-  console.log(currentIndex);
+  // console.log(currentIndex);
   if (currentIndex >= totalSlides / 2) {
     map1.classList.remove("active");
     map2.classList.add("active");
@@ -139,11 +138,25 @@ buttonsWrapper.addEventListener("click", (e) => {
     if (e.target.classList.contains("first")) {
       slides.style.transform = "translateX(-0%)";
       e.target.classList.add("active");
-      currentIndex = 0;
+      currentIndex = -1;
     } else if (e.target.classList.contains("second")) {
       slides.style.transform = "translateX(-33%)";
       e.target.classList.add("active");
       currentIndex = totalSlides / 2;
     }
   }
+});
+
+const prjImg = document.querySelectorAll(".prj .image");
+
+prjImg.forEach((ele) => {
+  const expand = document.createElement("div");
+
+  ele.addEventListener("mouseover", () => {
+    expand.classList.add("expand");
+    ele.appendChild(expand);
+  });
+  ele.addEventListener("mouseleave", () => {
+    ele.removeChild(expand);
+  });
 });
