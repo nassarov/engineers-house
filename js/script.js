@@ -131,3 +131,19 @@ function updateSlider() {
 
 // Auto-slide every 3 seconds
 setInterval(nextSlide, 3000);
+buttonsWrapper.addEventListener("click", (e) => {
+  if (e.target.nodeName === "BUTTON") {
+    Array.from(buttonsWrapper.children).forEach((item) =>
+      item.classList.remove("active")
+    );
+    if (e.target.classList.contains("first")) {
+      slides.style.transform = "translateX(-0%)";
+      e.target.classList.add("active");
+      currentIndex = 0;
+    } else if (e.target.classList.contains("second")) {
+      slides.style.transform = "translateX(-33%)";
+      e.target.classList.add("active");
+      currentIndex = totalSlides / 2;
+    }
+  }
+});
