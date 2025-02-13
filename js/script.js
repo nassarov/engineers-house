@@ -120,4 +120,14 @@ function nextSlide() {
     map2.classList.remove("active");
     map1.classList.add("active");
   }
+  updateSlider();
 }
+
+// Function to update the slider position
+function updateSlider() {
+  const translateValue = (-currentIndex / 1.75) * 20;
+  slides.style.transform = `translateX(${translateValue}%)`;
+}
+
+// Auto-slide every 3 seconds
+setInterval(nextSlide, 3000);
