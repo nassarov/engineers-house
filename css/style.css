@@ -374,12 +374,18 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  display: none;
+}
+.popup-content{display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 .popup-content img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 60%;
+  max-height: 60%;
+  
 }
+
 .hidden {
   display: none;
 }
