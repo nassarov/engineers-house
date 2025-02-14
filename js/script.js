@@ -178,3 +178,7 @@ close.addEventListener("click", () => {
   overlay.classList.add("hidden");
   overlay.removeChild(close);
 });
+overlay.addEventListener("click", () => {
+  overlay.classList.add("hidden");
+  overlay.removeChild(close);
+});
