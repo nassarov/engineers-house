@@ -174,4 +174,3 @@ expand.addEventListener("click", (e) => {
   overlay.appendChild(close);
   overlayImage.src = e.target.closest(".prj .image").querySelector("img").src;
 });
-
