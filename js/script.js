@@ -9,7 +9,7 @@ let img = 0;
 setInterval(() => {
   landing.style.backgroundImage = 'url("../imgs/img-' + img + '.jpg")';
   img++;
-  if (img === 4) img = 0;
+  if (img === 3) img = 0;
 }, 3000);
 
 // toggle option button to open settings
@@ -176,9 +176,7 @@ expand.addEventListener("click", (e) => {
 });
 close.addEventListener("click", () => {
   overlay.classList.add("hidden");
-  overlay.removeChild(close);
 });
 overlay.addEventListener("click", () => {
   overlay.classList.add("hidden");
-  overlay.removeChild(close);
 });
