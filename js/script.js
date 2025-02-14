@@ -1,6 +1,6 @@
 // select landing page
 let landing = document.querySelector(".landing-page");
-let images = ["img-0.jpg", "img-2.jpg", "img-3.jpg", "img-4.jpg"];
+let images = ["img-0.jpg", "img-1.jpg", "img-2.jpg", "img-3.jpg"];
 // setInterval(() => {
 //   let rand = Math.floor(Math.random() * images.length);
 //   landing.style.backgroundImage = 'url("../imgs/' + images[rand] + '")';
@@ -148,10 +148,13 @@ buttonsWrapper.addEventListener("click", (e) => {
 });
 
 const prjImg = document.querySelectorAll(".prj .image");
-
+const expand = document.createElement("div");
+const expandIcon = document.createElement("i");
+const overlay = document.querySelector(".pop-up-overlay");
+const overlayContent = document.querySelector(".popup-content");
+const overlayImage = document.querySelector(".popup-content img");
+console.log(overlay);
 prjImg.forEach((ele) => {
-  const expand = document.createElement("div");
-  const expandIcon = document.createElement("i");
   expandIcon.classList.add("fa-solid", "fa-expand", "expand-icon");
   expand.appendChild(expandIcon);
   ele.addEventListener("mouseover", () => {
