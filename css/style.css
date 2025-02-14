@@ -385,7 +385,21 @@ body {
   max-height: 60%;
   
 }
-
+.close {
+  position: absolute;
+  display: flex;
+  color: white;
+  background-color: var(--secondary);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  top: 10%;
+  right: 5%;
+}
 .hidden {
   display: none;
 }
