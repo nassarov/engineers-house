@@ -123,7 +123,7 @@ function nextSlide() {
 }
 // Function to move to the prev slide
 function prevSlide() {
-  currentIndex = currentIndex - 1; 
+  currentIndex = currentIndex - 1;
   if (currentIndex < 0) {
     currentIndex = 0;
   }
@@ -173,14 +173,15 @@ expand.addEventListener("mouseout", () => {
 
 // Allow user to scroll left and right
 slides.addEventListener("wheel", (e) => {
+  stopAutoSlide();
   e.preventDefault();
   if (e.deltaY > 0) {
     nextSlide();
   } else {
     prevSlide();
   }
+  startAutoSlide();
 });
-
 
 buttonsWrapper.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
