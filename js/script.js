@@ -165,3 +165,5 @@ prjImg.forEach((ele) => {
     ele.removeChild(expand);
   });
 });
+const close = document.createElement("span");
+const button = document.createTextNode("X");
