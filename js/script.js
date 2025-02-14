@@ -141,6 +141,45 @@ function updateSlider() {
   const translateValue = (-currentIndex / 1.75) * 20;
   slides.style.transform = `translateX(${translateValue}%)`;
 }
+// Auto-slide every 3 seconds
+let autoSlideInterval;
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(nextSlide, 1500);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+// Auto-slide every 3 seconds
+startAutoSlide();
+
+const expand = document.createElement("div");
+const prjImg = document.querySelectorAll(".prj .image");
+const expandIcon = document.createElement("i");
+const overlay = document.querySelector(".pop-up-overlay");
+const overlayContent = document.querySelector(".popup-content");
+const overlayImage = document.querySelector(".popup-content img");
+
+// Pause auto-slide when user touches projects and continue when user removes hand or mouse
+expand.addEventListener("mouseover", () => {
+  stopAutoSlide();
+});
+
+expand.addEventListener("mouseout", () => {
+  startAutoSlide();
+});
+
+// Allow user to scroll left and right
+slides.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  if (e.deltaY > 0) {
+    nextSlide();
+  } else {
+    prevSlide();
+  }
+});
 
 
 buttonsWrapper.addEventListener("click", (e) => {
