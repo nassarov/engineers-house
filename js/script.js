@@ -121,15 +121,28 @@ function nextSlide() {
   }
   updateSlider();
 }
-
+// Function to move to the prev slide
+function prevSlide() {
+  currentIndex = currentIndex - 1; 
+  if (currentIndex < 0) {
+    currentIndex = 0;
+  }
+  if (currentIndex >= totalSlides / 2) {
+    map1.classList.remove("active");
+    map2.classList.add("active");
+  } else {
+    map2.classList.remove("active");
+    map1.classList.add("active");
+  }
+  updateSlider();
+}
 // Function to update the slider position
 function updateSlider() {
   const translateValue = (-currentIndex / 1.75) * 20;
   slides.style.transform = `translateX(${translateValue}%)`;
 }
 
-// Auto-slide every 3 seconds
-setInterval(nextSlide, 3000);
+
 buttonsWrapper.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
     Array.from(buttonsWrapper.children).forEach((item) =>
@@ -147,13 +160,6 @@ buttonsWrapper.addEventListener("click", (e) => {
   }
 });
 
-const prjImg = document.querySelectorAll(".prj .image");
-const expand = document.createElement("div");
-const expandIcon = document.createElement("i");
-const overlay = document.querySelector(".pop-up-overlay");
-const overlayContent = document.querySelector(".popup-content");
-const overlayImage = document.querySelector(".popup-content img");
-console.log(overlay);
 prjImg.forEach((ele) => {
   expandIcon.classList.add("fa-solid", "fa-expand", "expand-icon");
   expand.appendChild(expandIcon);
@@ -176,7 +182,9 @@ expand.addEventListener("click", (e) => {
 });
 close.addEventListener("click", () => {
   overlay.classList.add("hidden");
+  overlay.removeChild(close);
 });
 overlay.addEventListener("click", () => {
   overlay.classList.add("hidden");
+  overlay.removeChild(close);
 });
