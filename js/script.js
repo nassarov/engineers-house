@@ -167,3 +167,11 @@ prjImg.forEach((ele) => {
 });
 const close = document.createElement("span");
 const button = document.createTextNode("X");
+expand.addEventListener("click", (e) => {
+  overlay.classList.remove("hidden");
+  close.appendChild(button);
+  close.classList.add("close");
+  overlay.appendChild(close);
+  overlayImage.src = e.target.closest(".prj .image").querySelector("img").src;
+});
+
