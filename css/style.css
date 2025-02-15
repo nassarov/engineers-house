@@ -463,3 +463,13 @@ body {
   opacity: 0;
   transition: transform 0.4s ease-in, opacity 0.4s ease-in;
 }
+.member:hover .cover-info {
+  transform: translateY(-40%);
+  opacity: 1;
+  cursor: context-menu;
+}
+.member:hover .cover-info:nth-child(2) {
+  transform: translateY(-55%);
+  opacity: 1;
+  cursor: context-menu;
+}
