@@ -494,3 +494,12 @@ body {
 .cover-info .links li a:hover {
   color: var(--secondary);
 }
+.cover-info h2 {
+  color: var(--secondary);
+}
+.cover-info h1 {
+  width: 300px;
+}
+.cover-info p {
+  color: #aaa;
+} /* End Team  */
