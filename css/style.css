@@ -434,4 +434,14 @@ body {
   justify-content: center;
   margin: 0 auto;
 }
-/* End Team  */
+.member {
+  text-align: center;
+  height: 550px;
+}
+.team-img {
+  margin: 0 auto;
+  width: 300px;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
