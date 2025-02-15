@@ -487,3 +487,10 @@ body {
   margin-left: 0;
   padding-left: 0;
 }
+.cover-info .links li a {
+  color: #aaa;
+  font-size: 20px;
+}
+.cover-info .links li a:hover {
+  color: var(--secondary);
+}
