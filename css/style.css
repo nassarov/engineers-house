@@ -283,12 +283,13 @@ body {
   background-color: var(--light);
   padding: 10px 0;
 }
-.projects .text {
+.text {
   text-align: center;
   padding: 20px;
   h3 {
     color: var(--secondary);
     font-size: larger;
+    text-transform: uppercase;
   }
   p {
     color: #aaa;
@@ -375,15 +376,14 @@ body {
   align-items: center;
   z-index: 1000;
 }
-.popup-content{display: flex;
+.popup-content {
+  display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .popup-content img {
   max-width: 60%;
   max-height: 60%;
-  
 }
 .close {
   position: absolute;
@@ -423,5 +423,15 @@ body {
   color: white;
   cursor: pointer;
 }
-
 /* End Projects */
+/* Start Team  */
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
+  gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
+}
+/* End Team  */
