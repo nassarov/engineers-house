@@ -473,3 +473,8 @@ body {
   opacity: 1;
   cursor: context-menu;
 }
+.member:hover .cover-info:nth-child(2) {
+  transform: translateY(-55%);
+  opacity: 1;
+  cursor: context-menu;
+}
