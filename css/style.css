@@ -478,3 +478,12 @@ body {
   opacity: 1;
   cursor: context-menu;
 }
+.cover-info .links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 0;
+  padding-left: 0;
+}
