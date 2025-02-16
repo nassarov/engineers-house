@@ -362,27 +362,40 @@
           >
           </iframe>
         </div>
-        <form class="form">
-          <input type="text" name="name" id="name" placeholder="Your Name" />
+        <form
+          action="https://formspree.io/f/mvgzvorg"
+          method="POST"
+          class="form"
+        >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+            required
+          />
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Your Email"
+            required
           />
           <input
             type="tel"
             name="phone"
             id="phone"
             placeholder="Your Phone Number"
+            required
           />
           <textarea
             name="message"
             id="message"
             rows="5"
             placeholder="Message"
+            required
           ></textarea>
-          <div class="submit">Send Message</div>
+          <button type="submit">Send Message</button>
         </form>
       </div>
     </div>
