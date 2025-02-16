@@ -434,7 +434,6 @@ body {
 .team-members {
   display: flex;
   flex-wrap: wrap;
-  height: 500px;
   gap: 30px;
   justify-content: center;
   margin: 0 auto;
@@ -507,7 +506,112 @@ body {
 } /* End Team  */
 /* Start contact */
 .contact {
-  margin-top: 150px;
   background-color: var(--light);
 }
+.contact-form {
+  display: flex;
+  justify-content: center;
+}
 /* End contact */
+/* panel form */
+.contact-form .form .outer {
+  padding: 15px;
+  width: 300px;
+  height: 345px;
+  transform: skewX(-15deg);
+  border-radius: 10px;
+  background-color: rgba(188, 185, 185, 0.694);
+}
+.outer .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: blue;
+}
+
+.inner table {
+  border: 1px solid white;
+}
+.row {
+  z-index: 5;
+  height: 47px;
+}
+.inner .inp {
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 300px;
+  height: 340px;
+}
+
+.inp input {
+  height: 30px;
+  width: 70%;
+  padding: 0 10px;
+  background-color: var(--light);
+  font-weight: bold;
+  outline: 3px solid var(--secondary);
+  border: none;
+}
+.inp textarea {
+  width: 70%;
+  height: 120px;
+  transform: translateY(-11px);
+  resize: none;
+  padding: 0 10px;
+  background-color: var(--light);
+  outline: 3px solid var(--secondary);
+  border: none;
+  font-weight: bold;
+}
+.inp input[type="text"] {
+  transform: translateY(11px);
+}
+
+.ball {
+  position: absolute;
+  left: -550px;
+  top: -100px;
+  margin: 50px 50%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  box-shadow: 0 0 35px 5px yellow, 0 0 25px 10px yellow inset;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skewX(15deg);
+  color: white;
+  cursor: pointer;
+}
+
+.ball:hover {
+  box-shadow: 0 0 140px 55px yellow, 0 0 30px 15px yellow inset;
+}
+
+.stand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  right: -300px;
+  top: -150px;
+  z-index: 2;
+  .ver {
+    width: 30px;
+    height: 120px;
+    transform: skewX(20deg);
+    background-color: #333;
+  }
+  .hor {
+    background-color: #333;
+    height: 40px;
+    width: 80px;
+  }
+}
