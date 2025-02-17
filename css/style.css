@@ -105,10 +105,10 @@ body {
   }
   .menu-container {
     width: 100%;
+    text-align: right;
   }
   .menu {
     list-style: none;
-    text-align: right;
     padding-left: 0;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -134,10 +134,12 @@ body {
   }
 }
 .toggle-menu {
+  display: none;
   background: none;
   width: 30px;
   border: none;
   cursor: pointer;
+  margin-top: 18px;
   span {
     display: block;
     background-color: white;
@@ -147,6 +149,14 @@ body {
 }
 .toggle-menu:focus {
   outline: none;
+}
+@media (max-width: 991px) {
+  .menu {
+    display: none;
+  }
+  .toggle-menu {
+    display: inline-block;
+  }
 }
 .introduction {
   color: white;
