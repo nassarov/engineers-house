@@ -541,15 +541,19 @@ body {
 
 .contact-cards .card {
   border: 1px solid #aaa;
-  border-radius: 8px;
+  border-radius: 2px;
   padding: 20px;
   background-color: #f9f9f9;
   margin-top: 50px;
   width: 220px;
   height: 200px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .contact-cards .card:hover {
