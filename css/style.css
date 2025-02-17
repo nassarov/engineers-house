@@ -103,6 +103,9 @@ body {
     font-weight: bold;
     font-size: larger;
   }
+  .menu-container {
+    width: 100%;
+  }
   .menu {
     list-style: none;
     text-align: right;
