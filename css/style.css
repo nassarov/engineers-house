@@ -109,9 +109,7 @@ body {
   .menu {
     list-style: none;
     text-align: right;
-    width: 100%;
     padding-left: 0;
-    padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     li {
@@ -124,7 +122,6 @@ body {
       a {
         text-decoration: none;
         color: white;
-        font-size: 16px;
         transition: 0.3s;
       }
       a:hover {
@@ -135,6 +132,21 @@ body {
       }
     }
   }
+}
+.toggle-menu {
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  span {
+    display: block;
+    background-color: white;
+    height: 3px;
+    margin-bottom: 3px;
+  }
+}
+.toggle-menu:focus {
+  outline: none;
 }
 .introduction {
   color: white;
