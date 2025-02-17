@@ -243,4 +243,8 @@ phoneNums.forEach((phone) => {
     window.location.href = `tel:${e.target.innerHTML}`;
   });
 });
+let email = document.querySelector(".email");
+email.addEventListener("click", () => {
+  window.location.href = `mailto:${email.innerHTML}`;
+});
 // End Contact
