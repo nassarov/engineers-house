@@ -587,3 +587,29 @@ body {
   cursor: pointer;
   margin-top: -1px;
 }
+
+/* MEDIA QUERIES */
+/* Small devices */
+@media (min-width: 576px) {
+  container {
+    max-width: 540px;
+  }
+}
+/* Medium devices */
+@media (min-width: 870px) {
+  container {
+    max-width: 830px;
+  }
+}
+/* Large screen */
+@media (min-width: 992px) {
+  container {
+    max-width: 960px;
+  }
+}
+/* Largest Screens */
+@media (min-width: 1200px) {
+  container {
+    max-width: 1140px;
+  }
+}
