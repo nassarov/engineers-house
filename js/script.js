@@ -239,7 +239,7 @@ address.addEventListener("click", () => {
 
 let phoneNums = document.querySelectorAll(".phn");
 phoneNums.forEach((phone) => {
-  addEventListener("click", (e) => {
+  phone.addEventListener("click", (e) => {
     window.location.href = `tel:${e.target.innerHTML}`;
   });
 });
