@@ -7,7 +7,7 @@ let images = ["img-0.jpg", "img-1.jpg", "img-2.jpg", "img-3.jpg"];
 // }, 3000);
 let img = 0;
 setInterval(() => {
-  landing.style.backgroundImage = 'url("../imgs/img-' + img + '.jpg")';
+  landing.style.backgroundImage = 'url("imgs/img-' + img + '.jpg")';
   img++;
   if (img === 3) img = 0;
 }, 3000);
@@ -108,14 +108,14 @@ window.onscroll = () => {
   if (windowScrollTop >= infoOffset) {
     header.classList.remove("header-area");
     header.classList.add("fixed-header");
-    logo.setAttribute("src", "/imgs/EngHousebgB.png");
+    logo.setAttribute("src", "imgs/EngHousebgB.png");
     menu.style.backgroundColor = "none";
     // menuOpen.style.backgroundColor = "white";
     ln.sryle.color = "black";
   } else if (windowScrollTop < infoOffset) {
     header.classList.add("header-area");
     header.classList.remove("fixed-header");
-    logo.setAttribute("src", "/imgs/EngHousebgW.png");
+    logo.setAttribute("src", "imgs/EngHousebgW.png");
     menu.style.backgroundColor = "none";
     // menuOpen.style.backgroundColor = "black";
     ln.sryle.color = "white";
