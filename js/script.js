@@ -264,6 +264,10 @@ toggleMenu.addEventListener("click", () => {
 // menu links scrollInto
 document.querySelectorAll(".scrl-btn").forEach((ele) => {
   ele.addEventListener("click", (e) => {
+    document.querySelectorAll(".scrl-btn.active").forEach((activeEle) => {
+      activeEle.classList.remove("active");
+    });
+    e.target.classList.add("active");
     let section = e.target.dataset.section;
     let target = document.querySelector(section);
     if (target) {
