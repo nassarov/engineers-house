@@ -292,3 +292,25 @@ document.querySelectorAll(".scrl-btn").forEach((ele) => {
     }
   });
 });
+
+// On scroll to section active corres. li a
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll(".menu li a");
+// console.log(navLinks[0].dataset.section);
+window.addEventListener("scroll", () => {
+  let scrollPosition = window.scrollY + 100;
+  sections.forEach((sec) => {
+    let secTop = sec.offsetTop;
+    let secH = sec.offsetHeight;
+    let secSelector = `.${sec.classList[0]}`;
+
+    if (scrollPosition >= secTop && scrollPosition < secTop + secH) {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.dataset.section === secSelector) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+});
