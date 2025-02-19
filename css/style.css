@@ -815,6 +815,7 @@ body {
   .about-info .about-data {
     flex-direction: row;
     padding: 0px;
+    margin-top: 10px;
     gap: 20px;
     width: 100%;
     .data-card {
@@ -826,7 +827,7 @@ body {
         font-size: 18px;
       }
       h4 {
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
