@@ -928,3 +928,105 @@ body {
     width: 100%;
   }
 }
+
+/* Footer Styles */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 40px 80px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Company Section */
+.company {
+  max-width: 300px;
+}
+
+.company h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Navigation Links */
+.sections-links h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sections-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sections-links ul li {
+  margin: 5px 0;
+}
+
+.sections-links ul li a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.sections-links ul li a:hover {
+  color: #ff9800;
+}
+
+/* Social Links */
+.social h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  cursor: pointer;
+  color: white;
+  font-size: 22px;
+  margin-right: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #ff9800;
+}
+
+/* Contact Info */
+.contact-info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0;
+}
+
+.contact-info i {
+  color: #ff9800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 40px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+  }
+
+  .social-links a {
+    font-size: 26px;
+  }
+}
