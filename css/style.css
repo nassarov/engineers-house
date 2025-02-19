@@ -760,7 +760,10 @@ body {
   cursor: pointer;
   margin-top: -1px;
 }
-
+hr {
+  display: none;
+  width: 0;
+}
 /* MEDIA QUERIES */
 /* Small devices */
 @media (min-width: 576px) {
@@ -917,6 +920,10 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+  }
+  hr {
+    display: inline-block;
+    width: 100%;
   }
 }
 @media (max-width: 340px) {
