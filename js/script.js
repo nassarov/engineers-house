@@ -80,6 +80,11 @@ window.onscroll = () => {
   // window scroll top
   let windowScrollTop = window.scrollY;
 
+  // For header fixing
+  let header = document.querySelector(".header-area");
+  let info = document.querySelector(".info");
+  let infoOffset = info.offsetTop;
+  let logo = document.querySelector(".logo img");
   if (windowScrollTop > aboutOffset + aboutOuterH - windowH && !isDataUpdated) {
     allData.forEach((data) => {
       if (data.dataset.n) {
@@ -96,6 +101,13 @@ window.onscroll = () => {
       }
     });
     isDataUpdated = true;
+  }
+  if (windowScrollTop >= infoOffset) {
+    header.classList.add("fixed-header");
+    logo.setAttribute("src", "/imgs/EngHousebgB.png");
+  } else if (windowScrollTop < infoOffset) {
+    header.classList.remove("fixed-header");
+    logo.setAttribute("src", "/imgs/EngHousebgW.png");
   }
 };
 
