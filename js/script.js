@@ -82,6 +82,8 @@ window.onscroll = () => {
 
   // For header fixing
   let header = document.querySelector("header");
+  let menu = document.querySelector(".menu.open");
+  let ln = document.querySelector(".menu.open li a");
   let info = document.querySelector(".info");
   let infoOffset = info.offsetTop;
   let logo = document.querySelector(".logo img");
@@ -106,10 +108,14 @@ window.onscroll = () => {
     header.classList.remove("header-area");
     header.classList.add("fixed-header");
     logo.setAttribute("src", "/imgs/EngHousebgB.png");
+    menu.style.backgroundColor = "white";
+    ln.sryle.color = "black";
   } else if (windowScrollTop < infoOffset) {
     header.classList.add("header-area");
     header.classList.remove("fixed-header");
     logo.setAttribute("src", "/imgs/EngHousebgW.png");
+    menu.style.backgroundColor = "black";
+    ln.sryle.color = "white";
   }
 };
 
