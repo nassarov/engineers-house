@@ -230,7 +230,6 @@ overlay.addEventListener("click", () => {
 });
 // Start Contact
 let address = document.querySelector(".address");
-console.log(address);
 address.addEventListener("click", () => {
   let link =
     "https://www.google.com/maps/place/Engineers'+House/@33.854379,36.01459,15z/data=!4m6!3m5!1s0x1518b70cd969778f:0x6516608b74e3123d!8m2!3d33.8543786!4d36.0145903!16s%2Fg%2F11rk5dstf7?hl=en&entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D";
@@ -248,3 +247,15 @@ email.addEventListener("click", () => {
   window.location.href = `mailto:${email.innerHTML}`;
 });
 // End Contact
+// menu
+let toggleMenu = document.querySelector(".toggle-menu");
+let links = document.querySelector(".menu");
+
+toggleMenu.addEventListener("click", () => {
+  links.classList.toggle("open");
+  if (links.style.maxHeight) {
+    links.style.maxHeight = null;
+  } else {
+    links.style.maxHeight = links.scrollHeight + "px";
+  }
+});
