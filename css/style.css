@@ -653,29 +653,57 @@ body {
 /* Start contact */
 .contact {
   background-color: var(--light);
-  padding: 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
+
 .contact-form {
   display: flex;
   flex-wrap: wrap;
-  background-color: white;
+  width: 100%;
+  max-width: 750px; /* Prevents it from getting too wide */
+  min-height: 500px;
+  border-radius: 10px; /* Optional: Adds better styling */
+  overflow: hidden; /* Prevents iframes from overflowing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Soft shadow */
 }
-.location {
-  width: 50%;
-}
+
+.location,
 .form {
   width: 50%;
 }
 
-.location iframe {
-  min-width: 100%;
-  min-height: 100%;
-}
+.location iframe,
 .form iframe {
   width: 100%;
+  height: 100%;
+  border: none;
 }
+
+/* responsive for smaller screens */
+@media (max-width: 768px) {
+  .contact-form {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    height: auto;
+  }
+
+  .location,
+  .form {
+    width: 100%;
+  }
+
+  .location iframe {
+    min-height: 250px;
+  }
+
+  .form iframe {
+    height: 450px;
+  }
+}
+
 .contact-cards {
   display: flex;
   flex-wrap: wrap;
@@ -870,5 +898,33 @@ body {
   }
   .member {
     height: 450px;
+  }
+  .contact-cards {
+    gap: 0;
+  }
+  .contact-cards .card {
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding: 6px;
+    background-color: #f9f9f9;
+    margin-top: 25px;
+    width: 222px;
+    height: 211px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3sease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+@media (max-width: 340px) {
+  .about-info .about-data {
+    flex-direction: row;
+    padding: 0px;
+    margin-top: 10px;
+    gap: 7px;
+    width: 100%;
   }
 }
