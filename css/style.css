@@ -77,7 +77,7 @@ body {
 /* Start Landing Page */
 .landing-page {
   min-height: 100vh;
-  background-image: url("../imgs/img-4.jpg");
+  background-image: url("imgs/img-4.jpg");
   background-size: cover;
 
   transition: 1s;
