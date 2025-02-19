@@ -134,6 +134,8 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 40px;
+  background-color: transparent;
+
   li {
     display: inline-block;
     margin-left: 10px;
