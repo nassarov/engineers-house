@@ -81,7 +81,7 @@ window.onscroll = () => {
   let windowScrollTop = window.scrollY;
 
   // For header fixing
-  let header = document.querySelector(".header-area");
+  let header = document.querySelector("header");
   let info = document.querySelector(".info");
   let infoOffset = info.offsetTop;
   let logo = document.querySelector(".logo img");
@@ -103,9 +103,11 @@ window.onscroll = () => {
     isDataUpdated = true;
   }
   if (windowScrollTop >= infoOffset) {
+    header.classList.remove("header-area");
     header.classList.add("fixed-header");
     logo.setAttribute("src", "/imgs/EngHousebgB.png");
   } else if (windowScrollTop < infoOffset) {
+    header.classList.add("header-area");
     header.classList.remove("fixed-header");
     logo.setAttribute("src", "/imgs/EngHousebgW.png");
   }
