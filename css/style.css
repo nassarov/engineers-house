@@ -102,8 +102,11 @@ body {
   .logo {
     width: 300px;
     padding: 15px 15px 15px 80px;
-    font-weight: bold;
-    font-size: larger;
+    margin-top: 7px;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
   }
   .menu-container {
     width: 100%;
