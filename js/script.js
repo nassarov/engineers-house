@@ -260,3 +260,17 @@ toggleMenu.addEventListener("click", () => {
     links.style.maxHeight = links.scrollHeight + "px";
   }
 });
+
+// menu links scrollInto
+document.querySelectorAll(".scrl-btn").forEach((ele) => {
+  ele.addEventListener("click", (e) => {
+    let section = e.target.dataset.section;
+    let target = document.querySelector(section);
+    if (target) {
+      let offset = 50;
+      let position = target.offsetTop - offset;
+
+      window.scrollTo({ behavior: "smooth", top: position });
+    }
+  });
+});
