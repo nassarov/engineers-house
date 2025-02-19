@@ -93,52 +93,69 @@ body {
   opacity: 0.3;
 }
 .header-area {
-  position: fixed;
+  position: sticky;
   z-index: 1000;
   color: white;
   display: flex;
   width: 100%;
+  transition: all 0.3s ease-in-out;
+}
 
-  .logo {
-    width: 300px;
-    padding: 15px 15px 15px 80px;
-    margin-top: 7px;
-    img {
-      max-width: 100%;
-      object-fit: cover;
+.logo {
+  width: 300px;
+  padding: 15px 15px 15px 80px;
+  margin-top: 7px;
+}
+
+.logo img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Fixed header when scrolling */
+.fixed-header {
+  position: fixed;
+  display: flex;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  color: black;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  width: 100%;
+  text-align: right;
+}
+.menu {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 40px;
+  li {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 400;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s;
     }
-  }
-  .menu-container {
-    width: 100%;
-    text-align: right;
-  }
-  .menu {
-    list-style: none;
-    padding-left: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 40px;
-    li {
-      display: inline-block;
-      margin-left: 10px;
-      cursor: pointer;
-      padding-left: 20px;
-      padding-right: 20px;
-      font-weight: 400;
-      a {
-        text-decoration: none;
-        color: white;
-        transition: 0.3s;
-      }
-      a:hover {
-        color: var(--secondary);
-      }
-      .active {
-        color: var(--secondary);
-      }
+    a:hover {
+      color: var(--secondary);
+    }
+    .active {
+      color: var(--secondary);
     }
   }
 }
+
 .toggle-menu {
   display: none;
   background: none;
@@ -651,7 +668,7 @@ body {
   box-shadow: 10px 10px 10px #aaa;
 }
 
-.contact-cards .card .logo {
+.contact-cards .card .cardlogo {
   display: inline-block;
   width: 60px;
   height: 60px;
