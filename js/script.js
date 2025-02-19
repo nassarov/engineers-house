@@ -253,6 +253,7 @@ let links = document.querySelector(".menu");
 
 toggleMenu.addEventListener("click", () => {
   links.classList.toggle("open");
+  toggleMenu.classList.toggle("open");
   if (links.style.maxHeight) {
     links.style.maxHeight = null;
   } else {
